@@ -2,6 +2,8 @@ FROM arm32v6/alpine:latest
 
 MAINTAINER nVentiveUX
 
+COPY qemu-arm-static /usr/bin/qemu-arm-static
+
 RUN set -x \
   && apk add --no-cache --update rsyslog wget tar \
   && apk add --no-cache --update --virtual .builddeps build-base;
