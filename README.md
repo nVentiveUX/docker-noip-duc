@@ -22,10 +22,11 @@ $ docker run --rm -it -v "noip:/usr/local/etc/" nventiveux/docker-noip-duc:lates
 Run the service
 
 ```shell
-$ sudo docker service create \
+$ docker service create \
   --name noip \
   --replicas 1 \
   --mount 'type=volume,src=noip,dst=/usr/local/etc/' \
+  --no-resolve-image \
   nventiveux/docker-noip-duc:latest
 ```
 
