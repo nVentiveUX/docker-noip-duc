@@ -8,7 +8,7 @@ RUN set -eux; \
   && apk add --no-cache --update --virtual .builddeps build-base;
 
 RUN set -eux; \
-  && mkdir -pv /opt/noip \
+  mkdir -pv /opt/noip \
   && wget -q "http://www.noip.com/client/linux/noip-duc-linux.tar.gz" -O /opt/noip/noip.tar.gz \
   && tar -C /opt/noip --strip-components=1 -xvf /opt/noip/noip.tar.gz \
   && sed -i '/no-ip2.conf/d' /opt/noip/Makefile \
