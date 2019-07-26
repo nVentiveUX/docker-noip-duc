@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/nVentiveUX/docker-noip-duc.svg?branch=master)](https://travis-ci.org/nVentiveUX/docker-noip-duc)
 
 Docker image for no-ip.com Linux Dynamic Update Client installation. Think for RaspberryPi. 
+Check tags at https://github.com/nVentiveUX/docker-noip-duc
 
 ## Quick start
 
@@ -19,7 +20,7 @@ Configure noip
 $ docker run --rm -it -v "noip:/usr/local/etc/" nventiveux/docker-noip-duc:latest noip2 -C
 ```
 
-Run the service
+Run as a service
 
 ```shell
 $ docker service create \
@@ -30,8 +31,12 @@ $ docker service create \
   nventiveux/docker-noip-duc:latest
 ```
 
-Check
+Run as a daemon
 
 ```shell
-$ docker logs noip.1.<ID>
+$ docker run -d \
+  --name noip \
+  --volume "noip:/usr/local/etc/" \
+  --restart=always \
+  nventiveux/docker-noip-duc:latest
 ```
