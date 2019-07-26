@@ -1,10 +1,12 @@
 sudo: required
 services: docker
 language: bash
+dist: bionic
 
 env:
   global:
-    - QEMU_VERSION=3.1.0-2
+    - QEMU_VERSION=4.0.0-2
+    - DOCKER_IMAGE="nventiveux/bubbleupnpserver"
   matrix:
     - TAG=latest
 
@@ -18,12 +20,13 @@ before_script:
 - tar -xzvf qemu-arm-static.tar.gz
 
 script:
-- docker build -t nventiveux/docker-noip-duc:${TAG} .
+- docker build -t ${DOCKER_IMAGE}:${TAG} .
 - docker images
 
 after_success:
 - docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
-- docker push nventiveux/docker-noip-duc:${TAG}
+- docker push ${DOCKER_IMAGE}
+- docker logout
 
 branches:
   only:
