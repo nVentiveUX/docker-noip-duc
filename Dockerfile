@@ -17,4 +17,3 @@ RUN set -eux; \
   && apk del .builddeps;
 
 CMD syslogd; noip2; tail -f /var/log/messages;
-
