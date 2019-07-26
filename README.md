@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/nVentiveUX/docker-noip-duc.svg?branch=master)](https://travis-ci.org/nVentiveUX/docker-noip-duc)
 
 Docker image for no-ip.com Linux Dynamic Update Client installation. Think for RaspberryPi. 
-Check tags at https://github.com/nVentiveUX/docker-noip-duc
+Check tags at https://hub.docker.com/r/nventiveux/docker-noip-duc
 
 ## Quick start
 
