@@ -1,4 +1,4 @@
-FROM arm32v6/alpine:3.10
+FROM arm32v6/alpine:latest
 MAINTAINER nVentiveUX
 
 COPY qemu-arm-static /usr/bin/qemu-arm-static
