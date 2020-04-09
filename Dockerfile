@@ -4,6 +4,7 @@ LABEL maintainer="nVentiveUX"
 
 COPY qemu-arm-static /usr/bin/qemu-arm-static
 
+# hadolint ignore=DL3018
 RUN set -eux; \
   apk update && apk add --no-cache --update rsyslog wget tar \
   && apk add --no-cache --update --virtual .builddeps build-base;
