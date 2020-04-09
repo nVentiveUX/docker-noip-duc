@@ -1,5 +1,6 @@
+# hadolint ignore=DL3007
 FROM arm32v6/alpine:latest
-MAINTAINER nVentiveUX
+LABEL maintainer="nVentiveUX"
 
 COPY qemu-arm-static /usr/bin/qemu-arm-static
 
