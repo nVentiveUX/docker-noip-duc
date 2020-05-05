@@ -1,5 +1,7 @@
-# docker-noip-duc
+# ARCHIVED - docker-noip-duc
 [![Build Status](https://travis-ci.org/nVentiveUX/docker-noip-duc.svg?branch=master)](https://travis-ci.org/nVentiveUX/docker-noip-duc)
+
+**I have moved to https://duckdns.org**
 
 Docker image for no-ip.com Linux Dynamic Update Client installation. Think for RaspberryPi. 
 Check tags at https://hub.docker.com/r/nventiveux/docker-noip-duc
